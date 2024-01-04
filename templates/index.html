@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letterhead on PDF</title>
+    <style>
+    body {
+        text-align: center;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        padding: 2vw;
+        background-color: #f5f5f5; /* Lighter gray background color */
+    }
+
+    h1 {
+        color: #009688; /* Teal heading color */
+        font-weight: bold;
+        font-size: 2.5vw;
+        margin-bottom: 1vw;
+    }
+
+    #developer-name {
+        color: #555;
+        font-size: 1vw;
+        margin-bottom: 1vw;
+        text-align: right;
+    }
+
+    .information {
+        background-color: #ffffff; /* White background for information container */
+        padding: 1vw;
+        max-width: 60vw;
+        margin: 0 auto;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1.8vw;
+    }
+
+    #comm {
+        color: #009688;
+        font-weight: bold;
+        font-size: 1.8vw;
+    }
+
+    #message {
+        color: #555;
+        font-size: 1.5vw;
+        margin-bottom: 1vw;
+    }
+
+    #tagline {
+        color: #009688;
+        font-weight: bold;
+        font-size: 1.8vw;
+    }
+
+    form {
+        margin-top: 2vw;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .functionality {
+        background-color: #009688; /* Teal background color for functionality div */
+        padding: 1.3vw;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        max-width: 40vw;
+        width: 45%;
+        margin-right: 5vw;
+    }
+
+    .final-button {
+        width: 45%;
+    }
+
+    .file-input-container {
+        position: relative;
+        width: 100%;
+        display: inline-block;
+    }
+
+    .choose-file-btn {
+        padding: 1.5vw 3vw;
+        font-size: 2vw;
+        background-color: #ffffff;
+        color: #009688;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s; /* Added box-shadow to the transition */
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+    }
+
+    .choose-file-btn:hover {
+        background-color: #e0e0e0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+
+    }
+</style>
+
+</head>
+<body>
+    <h1> ✌️</h1>
+    <h1>Pasting made easy!!</h1>
+
+    <div class="information">
+        <p id="comm">Heyy Team 👋 </p>
+        <p id="message">"Upload the PDF you wish to add your letterhead on. <br> Upload the letterhead image too, then you're good to go".</p>
+        <p id="tagline">Make it easy with ReraEasy!! 😉</p>
+        <label id="developer-name">_Soham Chandekar 😎</label>
+    </div>
+    <form action="/process" method="post" enctype="multipart/form-data">
+        <div class="button-container">
+            <div class="functionality">
+                <div id="file-input-container-pdf" class="file-input-container">
+                    <label for="pdf_file" class="file-input-label">Choose PDF File:</label>
+                    <label for="pdf_file" class="file-input-label">
+                        <input type="file" name="pdf_file" id="pdf_file" accept=".pdf" required>
+                    </label>
+                </div>
+                <div id="file-input-container-image" class="file-input-container">
+                    <label for="image_file" class="file-input-label">Choose Image File:</label>
+                    <label for="image_file" class="file-input-label">
+                        <input type="file" name="image_file" id="image_file" accept=".jpg, .png" required>
+                    </label>
+                </div>
+            </div>
+            <div class="final-button">
+                <button type="submit" class="choose-file-btn">Initiate Job 💼</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
